@@ -4,13 +4,18 @@ import Navbar from "./Navbar";
 import Body from "./body/Body";
 import Footer from "./Footer";
 
-//create your first component
+// ✅ PATRÓN POSITIVO: Componente principal bien organizado
+// 💡 SUGERENCIA: Considera usar <> </> (Fragment) en lugar de <div> si no necesitas estilos
+
 const Home = () => {
 	return (
 		<div>
-			<Navbar/>
-			<Body/>
-			<Footer/>
+			{/* ✅ COMPOSICIÓN CORRECTA: Navbar en la parte superior */}
+			<Navbar />
+			{/* ✅ Contenido principal en el medio */}
+			<Body />
+			{/* ✅ Footer al final */}
+			<Footer />
 		</div>
 	);
 };
