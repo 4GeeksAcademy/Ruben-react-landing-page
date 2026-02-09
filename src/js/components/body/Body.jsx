@@ -6,8 +6,8 @@ import Gallery from "./Gallery";
 function Body(){
     return (
         <div className="container mx-auto p-4">
-            <Jumbotron/>
-            <Gallery/>
+            <Jumbotron />
+            <Gallery />
         </div>
     );
 };

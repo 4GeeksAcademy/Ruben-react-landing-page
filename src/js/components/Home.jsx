@@ -1,17 +1,17 @@
 import React from "react";
 
-import Navbar from "./Navbar";
+import Navbar from "../navbar/Navbar";
 import Body from "./body/Body";
 import Footer from "./Footer";
 
 //create your first component
 const Home = () => {
 	return (
-		<div>
-			<Navbar/>
-			<Body/>
-			<Footer/>
-		</div>
+		<>
+			<Navbar brand={"Start Bootstrap"} menuLinks={["Home","About","Services","Contact"]} />
+			<Body />
+			<Footer />
+		</>
 	);
 };
 
