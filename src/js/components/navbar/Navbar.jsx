@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import LinkList from "./LinkList"
 
 function Navbar({menuLinks, brand}) {
@@ -23,6 +23,11 @@ function Navbar({menuLinks, brand}) {
             </div>
         </nav>
     );
+};
+
+Navbar.propTypes = {
+    menuLinks: PropTypes.arrayOf(PropTypes.object).isRequired,
+    brand: PropTypes.string.isRequired
 };
 
 export default Navbar;

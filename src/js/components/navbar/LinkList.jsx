@@ -1,14 +1,19 @@
+import PropTypes from "prop-types";
+
 function LinkList ({menuLinks}){
     
-    const list= menuLinks.map((name,linkIndex) => 
-        <li key={linkIndex} className={linkIndex === 0 ? "nav-item active" : "nav-item"}  aria-current={linkIndex === 0 ? "page" : ""} >
-            <a className="nav-link" href="#">{name}</a>
+    const list= menuLinks.map((object) => 
+        <li key={object.id} className="nav-item" >
+            <a className="nav-link" href={object.href}>{object.name}</a>
         </li>
     )
     return(
-        <>
-            {list}
-        </>
+        <>{list}</>
     )
 }
+
+LinkList.propTypes = {
+    menuLinks: PropTypes.arrayOf(PropTypes.object).isRequired
+};
+
 export default LinkList;

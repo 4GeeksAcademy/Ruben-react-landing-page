@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Card({text, title, image}) {
+function Card({ text, title, image, buttonText }) {
     return (
         <div className="card">
             <img src={image} className="card-img-top" alt="Card Image" />
@@ -9,7 +9,7 @@ function Card({text, title, image}) {
                 <p className="card-text">{text}</p>
             </div>
             <div className="card-footer text-center">
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <a href="#" className="btn btn-primary">{buttonText}</a>
             </div>
         </div>
     );
@@ -18,12 +18,14 @@ function Card({text, title, image}) {
 Card.propTypes = {
     text: PropTypes.string.isRequired,
     title: PropTypes.string,
-    image: PropTypes.string
+    image: PropTypes.string,
+    buttonText: PropTypes.string
 };
 
 Card.defaultProps = {
     title: "Card title",
-    image: "https://placehold.co/600x400"
+    image: "https://placehold.co/600x400",
+    buttonText: "Go Somewhere"
 };
 
 export default Card;
